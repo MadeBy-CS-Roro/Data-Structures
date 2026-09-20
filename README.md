@@ -32,3 +32,8 @@ Throughout this repository, I implement and utilize:
 Understanding data structures is the backbone of efficient software engineering. It is also a critical prerequisite for advanced fields like **Cybersecurity** and systems analysis, as it builds the analytical mindset required to understand complex systems and vulnerabilities.
 
 ---
+
+<div align="center">
+  <b>Developed with passion by Reema</b><br><br>
+  <a href="https://www.linkedin.com/in/reema-alshowiman">Connect with me on LinkedIn</a>
+</div>

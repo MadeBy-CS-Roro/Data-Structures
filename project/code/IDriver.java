@@ -26,12 +26,4 @@ public interface IDriver extends IPerson, Comparable<IDriver> {
     //Sets the driver's vehicle type.
     void setVehicleType(VehicleType vehicleType);
 
-    /**
-     * Compares this driver with another driver based on driver ID.
-     * Returns a negative integer, zero, or a positive integer as this
-     * driver's ID is less than, equal to, or greater than the other
-     * driver's ID. This ordering must be consistent with equality by ID.
-     */
-    @Override
-    int compareTo(IDriver other);
 }

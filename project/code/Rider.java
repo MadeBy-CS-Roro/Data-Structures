@@ -1,4 +1,4 @@
-class Rider extends person implements IRider{
+class Rider extends Person implements IRider{
 private String email;
 private String homeCity;
 

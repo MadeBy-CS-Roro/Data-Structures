@@ -1,8 +1,8 @@
-public class Drive extends Person implements IDrive{
+public class Driver extends Person implements IDriver{
 private String vehiclePlate;
 private VehicleType  vehicleType ;
 
-Drive(int id,String name, String phoneNumber,String vehiclePlate,VehicleType vehicleType){
+Driver(int id,String name, String phoneNumber,String vehiclePlate,VehicleType vehicleType){
 super(id,name,phoneNumber);
 setVehiclePlate(vehiclePlate);
 this.vehicleType=vehicleType;
@@ -27,15 +27,17 @@ if(c<'0'||c>'9')
 throw new IllegalArgumentException("last 4 must be digit");
 
 }
-this.vehiclePlate=vehiclePlate;}
+    this.vehiclePlate=vehiclePlate;
+}
 
-VehicleType getVehicleType(){
+public VehicleType getVehicleType(){
 return vehicleType;}
 
-void setVehicleType(VehicleType vehicleType){
-this.vehicleType=vehicleType;}
+ public void setVehicleType(VehicleType vehicleType){
+    this.vehicleType=vehicleType;
+}
 
-int compareTo(IDriver other){
+public int compareTo(IDriver other){
 return getId()-other.getId();}
 
 public String toString(){

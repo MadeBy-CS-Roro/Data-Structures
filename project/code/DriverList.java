@@ -114,6 +114,7 @@ public class DriverList implements IDriverList{
     @Override
     public LinkedList<IDriver> findByVehicleType(VehicleType vehicleType) {
         LinkedList<IDriver> result = new LinkedList<>();
+
         if (vehicleType == null) {
             return result; //empty list if the vehicle type is null
         }
@@ -279,4 +280,4 @@ public class DriverList implements IDriverList{
         return drivers.size();
     }
 }
-
+//Done

@@ -1,3 +1,7 @@
+/**
+ * Stores riders in a singly linked list kept in sorted order by rider ID.
+ * Rider ID and email are unique; name and home city are not.
+ */
 public class RiderList implements IRiderList {
 
     private LinkedList<IRider> riders; // Stores all riders in a structure maintained in sorted order by rider ID.
@@ -19,12 +23,12 @@ public class RiderList implements IRiderList {
             return false;
         }
 
-        Node<IRider> prev = null;
+        Node<IRider> previous = null;
         Node<IRider> current = riders.getHead();
 
         // move forward while the current ID is smaller than the new ID
         while (current != null && rider.getId() > current.getData().getId()) {
-            prev = current;
+            previous = current;
             current = current.getNext();
         }
 
@@ -32,7 +36,7 @@ public class RiderList implements IRiderList {
         if (current != null && current.getData().getId() == rider.getId()) {
             return false;
         }
-        riders.insertAfter(prev, rider); // prev == null means insert at head
+        riders.insertAfter( previous, rider); // prev == null means insert at head
         return true;
     }
 
@@ -246,3 +250,4 @@ public class RiderList implements IRiderList {
         return riders.size();
     }
 }
+//Done

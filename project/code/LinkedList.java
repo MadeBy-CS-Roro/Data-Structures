@@ -9,7 +9,7 @@
 
 public class LinkedList<T> {
     private Node<T> head;  // first node 
-    private Node<T> tail;  // last node , this will provide some method O(1) instade of O(n) and O(n) instade of O(n^2) in other classes
+    private Node<T> tail;  // last node; makes addLast O(1) instead of O(n).
     private int size;      // number of elements in the list
 
     public LinkedList() {
@@ -81,7 +81,6 @@ public class LinkedList<T> {
         }
         size++;
     }
-
     
     //Removes the first element and returns it, or returns null if the list is empty.
     //Big O(1)
@@ -108,10 +107,12 @@ public class LinkedList<T> {
         if (previous == null) {// remove the first node
             return removeFirst();
         }
+
         Node<T> target = previous.getNext();
         if (target == null) {// nothing to remove
             return null;
         }
+        
         previous.setNext(target.getNext());
         if (target == tail) {// removed the last node
             tail = previous;

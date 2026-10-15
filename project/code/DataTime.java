@@ -4,6 +4,7 @@ private int month;
 private int day;
 private int hour;
 private int minute;
+//soso
 
 public DataTime(int year,int month,int day,int hour,int minute){
 this.year=year;

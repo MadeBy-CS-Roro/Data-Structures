@@ -6,6 +6,7 @@ private int hour;
 private int minute;
 //soso
 //welcome
+//seconed
 
 public DataTime(int year,int month,int day,int hour,int minute){
 this.year=year;

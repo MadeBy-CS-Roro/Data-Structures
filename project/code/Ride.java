@@ -42,7 +42,7 @@ public abstract class Ride<T> implements IRide{
         this.dropoffLocation = dropoffLocation;
     }
 
-	public Driver getDriver(){
+	public IDriver getDriver(){
         return driver;
     }
 

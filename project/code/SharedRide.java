@@ -11,14 +11,17 @@ public class SharedRide extends Ride{
     }
 
 	// Returns a formatted string describing the ride.
-	@Override
+	
 	public String toString(){
         return super.toString() + " SharedRide toString holder";
     }
 
 	// Compares rides alphabetically by pickup location.
-	@Override
+	/*
 	public int compareTo(IRide other){
-        return 0;
+        return super.compareTo((Ride)other);
+    }*/
+   public int compareTo(IRide other){
+        return super.compareTo((Ride)other);
     }
 }

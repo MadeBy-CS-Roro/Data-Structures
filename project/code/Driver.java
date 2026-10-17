@@ -1,6 +1,6 @@
 public class Driver extends Person implements IDriver{
 private String vehiclePlate;
-private VehicleType  vehicleType ;
+private VehicleType vehicleType ;
 
 Driver(int id,String name, String phoneNumber,String vehiclePlate,VehicleType vehicleType){
 super(id,name,phoneNumber);

@@ -1,12 +1,12 @@
 public abstract class Ride<T> implements IRide{
-    protected String pickupLocation;
-    protected DateTime pickupTime;
-    protected String dropoffLocation;
-    protected DateTime dropoffTime;
-    protected Driver driver;
     protected int rideID;
+    protected String pickupLocation;
+    protected IDateTime pickupTime;
+    protected String dropoffLocation;
+    protected IDateTime dropoffTime;
+    protected IDriver driver;
 
-    public Ride (String PL, DateTime PT, String DL, DateTime DT, Driver D, int id){
+    public Ride (String PL, IDateTime PT, String DL, IDateTime DT, IDriver D, int id){
         pickupLocation = PL;
         pickupTime = PT;
         dropoffLocation = DL;
@@ -26,11 +26,11 @@ public abstract class Ride<T> implements IRide{
         this.pickupLocation = pickupLocation;
     }
 
-	public DateTime getPickupTime(){
+	public IDateTime getPickupTime(){
         return pickupTime;
     }
 
-	public DateTime getDropoffTime(){
+	public IDateTime getDropoffTime(){
         return dropoffTime;
     }
 
@@ -46,12 +46,12 @@ public abstract class Ride<T> implements IRide{
         return driver;
     }
 
-	public void setDriver(Driver driver){
+	public void setDriver(IDriver driver){
         this.driver = driver;
     }
 
     public int compareTo(Ride<T> other){
-        return 0;
+        return pickupTime.compareTo(other.getPickupTime());
     }
 
     public String toString(){

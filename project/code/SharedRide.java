@@ -1,4 +1,5 @@
-public class SharedRide extends Ride implements ISharedRide{
+//NOT MAKING ME IMPLEMENT ISharedRide because I am extending Ride which implements IRide, so I am already implementing IRide
+public class SharedRide extends Ride{
     RiderList Riders;
 
     public SharedRide(String PL, DateTime PT, String DL, DateTime DT, Driver D, int id){
@@ -26,7 +27,7 @@ public class SharedRide extends Ride implements ISharedRide{
     }
 
     public boolean isEmpty(){
-        return Riders.empty();
+        return Riders.size() == 0;
     }
 
 	// Returns a formatted string describing the ride.

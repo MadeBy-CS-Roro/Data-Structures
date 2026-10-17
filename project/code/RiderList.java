@@ -8,7 +8,7 @@ public class RiderList implements IRiderList {
 
     // Constructor to initialize the RiderList with an empty LinkedList.
     public RiderList() {
-        this.riders = new LinkedList<>();
+        this.riders = new LinkedList<IRider>();
     }
 
   

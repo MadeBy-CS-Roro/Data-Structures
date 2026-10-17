@@ -1,27 +1,42 @@
-public class SharedRide extends Ride{
-    String[] riders;
+public class SharedRide extends Ride implements ISharedRide{
+    RiderList Riders;
 
     public SharedRide(String PL, DateTime PT, String DL, DateTime DT, Driver D, int id){
         super(PL, PT, DL, DT, D, id);
-        riders = new String[5];
+        Riders = new RiderList();
+    }
+
+    public LinkedList<IRider> getParticipants(){
+        return Riders.getAll();
+    }
+
+    public boolean addParticipant(IRider rider){
+        return Riders.add(rider);
     }
 
     public boolean hasRider(int riderId){
+        if (Riders.findById(riderId) != null) {
+            return true;
+        }
         return false;
     }
 
+    public boolean removeParticipantById(int riderId){
+        return Riders.removeById(riderId);
+    }
+
+    public boolean isEmpty(){
+        return Riders.empty();
+    }
+
 	// Returns a formatted string describing the ride.
-	
 	public String toString(){
         return super.toString() + " SharedRide toString holder";
     }
 
 	// Compares rides alphabetically by pickup location.
-	/*
-	public int compareTo(IRide other){
-        return super.compareTo((Ride)other);
-    }*/
-   public int compareTo(IRide other){
+    @Override
+    public int compareTo(IRide other){
         return super.compareTo((Ride)other);
     }
 }

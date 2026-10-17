@@ -50,7 +50,7 @@ public abstract class Ride<T> implements IRide{
         this.driver = driver;
     }
 
-    public int compareTo(Ride<T> other){
+    public int compareTo(IRide other){
         return pickupTime.compareTo(other.getPickupTime());
     }
 

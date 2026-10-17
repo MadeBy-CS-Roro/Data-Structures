@@ -12,23 +12,20 @@ public String getVehiclePlate(){
 return vehiclePlate;}
 
 public void setVehiclePlate(String VehiclePlate){
-if(vehiclePlate==null||vehiclePlate.length()!=7)
-throw new IllegalArgumentException("plate must 7 character");
-for(int i=0;i<3;i++){
-char c =vehiclePlate.charAt(i);
-if(c<'A'||c>'Z')
-throw new IllegalArgumentException("First 3 must be uppecase letters");
-
-}
-
-for(int i=3;i<7;i++){
-char c =vehiclePlate.charAt(i);
-if(c<'0'||c>'9')
-throw new IllegalArgumentException("last 4 must be digit");
-
-}
-    this.vehiclePlate=vehiclePlate;
-}
+    if(VehiclePlate==null||VehiclePlate.length()!=7)
+        throw new IllegalArgumentException("plate must 7 character");
+    for(int i=0;i<3;i++){
+        char c =VehiclePlate.charAt(i);
+        if(c<'A'||c>'Z')
+            throw new IllegalArgumentException("First 3 must be uppecase letters");
+            }
+    for(int i=3;i<7;i++){
+        char c =VehiclePlate.charAt(i);
+        if(c<'0'||c>'9')
+            throw new IllegalArgumentException("last 4 must be digit");
+            }
+    this.vehiclePlate=VehiclePlate;
+    }
 
 public VehicleType getVehicleType(){
 return vehicleType;}

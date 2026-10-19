@@ -9,6 +9,8 @@
  * 2. Using the `search` method above, implement the `searchEven` method (along with its 
  *    appropriate Condition implementation) to find the first even number in an array of integers.
  */
+
+//1
 public interface Condition<T>{
   boolean test(T data);
 }
@@ -22,5 +24,18 @@ public class Uitls{
     ruturn -1;
   }
 }
+
+//2
+public class EvenCondition implements Condition<Integer>{
+  public boolean test(Integer data){
+    return data%2 == 0;
+  }
+}
+  
+public static int searchEven(T[] data, int n ){
+    Condition<Integer> cond = new EvenCondition();
+    return search(data n, cond);
+}
+
     
     

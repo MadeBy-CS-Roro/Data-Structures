@@ -2,17 +2,17 @@
  * Problem 3: removeBetween Method (DoubleLinkedList)
  * 
  * Description:
- * - Write the method `removeBetween` as a member of the `DoubleLinkedList` class[cite: 4].
+ * - Write the method `removeBetween` as a member of the `DoubleLinkedList` class.
  * - The method takes two elements e1 and e2, and removes all elements located *between* them 
- *   (note that e1 and e2 themselves are *not* removed)[cite: 4].
- * - If e1 or e2 (or both) do not exist, or if no elements are between them, no element is removed[cite: 4].
- * - Assumptions: Elements are unique, and e1 != e2[cite: 4].
- * - Constraint: Do not call any methods and do not use any auxiliary data structures[cite: 4].
- * - Signature: public void removeBetween(T e1, T e2)[cite: 4].
+ *   (note that e1 and e2 themselves are *not* removed).
+ * - If e1 or e2 (or both) do not exist, or if no elements are between them, no element is removed.
+ * - Assumptions: Elements are unique, and e1 != e2.
+ * - Constraint: Do not call any methods and do not use any auxiliary data structures.
+ * - Signature: public void removeBetween(T e1, T e2).
  * 
  * Example:
  * Given list: A <-> B <-> C <-> D <-> E <-> F
- * removeBetween('B', 'E') results in: A <-> B <-> E <-> F[cite: 4]
+ * removeBetween('B', 'E') results in: A <-> B <-> E <-> F
  */
 
 public void removeBetwaan( T e1, T e2){
